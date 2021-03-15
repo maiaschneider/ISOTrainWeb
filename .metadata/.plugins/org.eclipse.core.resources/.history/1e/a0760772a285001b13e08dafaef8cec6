@@ -1,0 +1,24 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.BeforeTest;
+
+public class LoginTest {
+	private String PATHDRIVER = "C:\\drivers/";
+    private String baseURL = "https://demos.isotrain.com/MobileTest";
+    
+    WebDriver	driver;
+    
+    
+    @BeforeTest
+    public void setup(){
+        System.setProperty("webdriver.chrome.driver",PATHDRIVER+"chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
+        driver = new ChromeDriver(options);
+        
+       // configureSelenide();
+    }
+}

@@ -1,0 +1,32 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class LoginTest {
+	private String PATHDRIVER = "C:\\drivers/";
+    private String baseURL = "https://demos.isotrain.com/MobileTest";
+    
+    WebDriver	driver;
+    
+    
+    @BeforeTest
+    public void setup(){
+        System.setProperty("webdriver.chrome.driver",PATHDRIVER+"chromedriver.exe");
+        driver = new ChromeDriver();
+        
+    }
+    
+    
+    @Parameters({"serverPath", "user", "password"})
+	@Test (priority = 1)
+    public void signUp(String serverPath, String user, String password) throws NumberFormatException, InterruptedException{
+	// public void signUp() {
+	driver.get(serverPath);
+	Thread.sleep(new Long("8000"));
+    }
+}

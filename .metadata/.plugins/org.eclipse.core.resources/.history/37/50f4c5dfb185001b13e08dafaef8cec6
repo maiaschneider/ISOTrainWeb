@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+	<parameter name="serverPath" 		value="https://demos.isotrain.com/MobileTest" />
+
+	
+	<test name="Test">
+	 <parameter name="serverPath" 		value="https://demos.isotrain.com/MobileTest" />
+	 <parameter name="user" 				value="100-01"/>
+	 <parameter name="password" 			value="a"/>
+	
+	 
+		<classes>
+			<class name="tests.LoginTest" >
+				<methods>
+					<include name="signIn"/>			 
+		
+				</methods>
+			</class>
+				
+		</classes>
+	</test>
+</suite>	
